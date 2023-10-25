@@ -12,6 +12,18 @@
         "default": "mqtt",
         "required": true
       },
+      "redis": {
+        "title": "Redis URI",
+        "type": "string",
+        "default": "redis://0.0.0.0:6379",
+        "required": true
+      },
+      "getterDevices": {
+        "title": "Getter devices",
+        "type": "string",
+        "default": "name1,serviceName1|name2,serviceName2",
+        "required": false
+      },
       "url":  {
         "title": "url",
         "type": "string",

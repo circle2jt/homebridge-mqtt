@@ -16,16 +16,17 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/cflurin/homebridge-mqtt.git"
+    "url": "https://github.com/circle2jt/homebridge-mqtt.git"
   },
   "bugs": {
-    "url": "http://github.com/cflurin/homebridge-mqtt/issues"
+    "url": "http://github.com/circle2jt/homebridge-mqtt/issues"
   },
   "engines": {
     "node": ">=4.3.2",
     "homebridge": ">=0.4.16"
   },
   "dependencies": {
+    "ioredis": "^5.3.2",
     "mqtt": ">=2.4.0"
   }
 }
