@@ -30,31 +30,6 @@
         "default": "",
         "required": false
       },
-      "url":  {
-        "title": "url",
-        "type": "string",
-        "default": "redis://120.0.0.1",
-        "required": true,
-        "description": "Replace 127.0.0.1 with the ip-address of your redis broker."
-      },
-      "key": {
-        "title": "key",
-        "type": "string",
-        "required": false,
-        "description": "Path to the key (optional)."
-      },
-      "ca": {
-        "title": "ca",
-        "type": "string",
-        "required": false,
-        "description": "Path to the ca_certificate (optional)."
-      },
-      "client_id": {
-        "title": "client_id",
-        "type": "string",
-        "required": false,
-        "description": "redis client id (optional)."
-      },
       "topic_type": {
         "title": "topic_type",
         "type": "string",
