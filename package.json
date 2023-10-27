@@ -4,7 +4,7 @@
   "description": "Redis Plugin for Homebridge",
   "license": "ISC",
   "author": {
-    "name": "flurin"
+    "name": "circle2jt"
   },
   "keywords": [
     "homebridge",
@@ -16,10 +16,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/circle2jt/homebridge-mqtt.git"
+    "url": "https://github.com/circle2jt/homebridge-redis.git"
   },
   "bugs": {
-    "url": "http://github.com/circle2jt/homebridge-mqtt/issues"
+    "url": "http://github.com/circle2jt/homebridge-redis/issues"
   },
   "engines": {
     "node": ">=4.3.2",

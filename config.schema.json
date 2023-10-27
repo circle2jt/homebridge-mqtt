@@ -12,13 +12,7 @@
         "default": "redis",
         "required": true
       },
-      "redisDB": {
-        "title": "Redis URI",
-        "type": "string",
-        "default": "redis://0.0.0.0:6379",
-        "required": true
-      },
-      "redisPubSub": {
+      "redis": {
         "title": "Redis URI",
         "type": "string",
         "default": "redis://0.0.0.0:6379",
