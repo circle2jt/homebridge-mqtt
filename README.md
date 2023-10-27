@@ -1,12 +1,12 @@
-# homebridge-mqtt
+# homebridge-redis
 [![verified-by-homebridge](https://badgen.net/badge/homebridge/verified/purple)](https://github.com/homebridge/homebridge/wiki/Verified-Plugins)
 
 [![NPM version][npm-image]][npm-url]
 
-[npm-image]: http://img.shields.io/npm/v/homebridge-mqtt.svg
-[npm-url]: https://npmjs.org/package/homebridge-mqtt
+[npm-image]: http://img.shields.io/npm/v/homebridge-redis.svg
+[npm-url]: https://npmjs.org/package/homebridge-redis
 
-Homebridge-mqtt is a Plugin for Homebridge. The design is based on MVC pattern, have a look at [homebridge-mvc](https://github.com/cflurin/homebridge-mvc). Homebridge-mqtt is a dynamic Plugin that allows you to add and control accessories from a "Bridge" or "Device" with a mqtt API. [Node-RED](http://nodered.org/) is the perfect platform to use with homebridge-mqtt.
+Homebridge-redis is a Plugin for Homebridge. The design is based on MVC pattern, have a look at [homebridge-mvc](https://github.com/cflurin/homebridge-mvc). Homebridge-redis is a dynamic Plugin that allows you to add and control accessories from a "Bridge" or "Device" with a redis API. [Node-RED](http://nodered.org/) is the perfect platform to use with homebridge-redis.
 
 Note-RED is a visual tool for wiring together hardware devices, APIs and online services.
 
@@ -14,20 +14,20 @@ Note-RED is a visual tool for wiring together hardware devices, APIs and online 
 
 If you are new to Homebridge, please first read the [documentation](https://github.com/nfarina/homebridge) to install Homebridge.
 
-Install the homebridge-mqtt plugin through Homebridge Config UI X.
+Install the homebridge-redis plugin through Homebridge Config UI X.
 
 ### Configuration/Setting
 
-Go to Homebridge Config UI X, select `Plugins > Homebridge Mqtt` and click `SETTINGS`.
+Go to Homebridge Config UI X, select `Plugins > Homebridge redis` and click `SETTINGS`.
 
 `config.json`
 
 ```sh
 "platforms": [
   {
-    "platform": "mqtt",
-    "name": "mqtt",
-    "url": "mqtt://127.0.0.1",
+    "platform": "redis",
+    "name": "redis",
+    "url": "redis://127.0.0.1",
     "port": "1883",
     "username": "foo",
     "password": "bar",
@@ -42,7 +42,7 @@ Go to Homebridge Config UI X, select `Plugins > Homebridge Mqtt` and click `SETT
 ]
 ```
 
-Replace `127.0.0.1` with the ip-address of your mqtt broker.
+Replace `127.0.0.1` with the ip-address of your redis broker.
 
 topic_type `multiple`: the data is sent to all devices, e.g.
 ```sh
@@ -54,7 +54,7 @@ topic : homebridge/from/set/flex_lamp
 ```
 
 #
-# mqtt API
+# redis API
 
 The data (payload) is sent/received in a JSON format using following topics:
 
@@ -351,7 +351,7 @@ topic: homebridge/from/get
 payload: {"name": "flex_lamp", "service_name": "light", "service_type":"Switch", "characteristic": "On", "cachedValue": true}
 ```
 
-Homebridge-mqtt will return the cached value to HomeKit. Optionally you can publish the actual value using
+Homebridge-redis will return the cached value to HomeKit. Optionally you can publish the actual value using
 `homebridge/to/set`.
 
 ### set value (from homebridge)
@@ -395,7 +395,7 @@ payload: {"name": "flex_lamp", "manufacturer": "espressif", "model": "esp8266-12
 
 ```sh
 topic: homebridge/from/identify
-payload: {"name":"indoor_temp","manufacturer":"homebridge-mqtt","model":"v0.3.0","serialnumber":"2017-02-13T12:17"}
+payload: {"name":"indoor_temp","manufacturer":"homebridge-redis","model":"v0.3.0","serialnumber":"2017-02-13T12:17"}
 ```
 
 ### define characterstic
@@ -495,6 +495,6 @@ property = 0 or 1
 #
 # Node-red example
 
-![node-red-mqtt](https://cloud.githubusercontent.com/assets/5056710/17394282/9ac0afbc-5a28-11e6-8d6e-01d2e1a32870.jpg)
+![node-red-redis](https://cloud.githubusercontent.com/assets/5056710/17394282/9ac0afbc-5a28-11e6-8d6e-01d2e1a32870.jpg)
 
-For more examples take a look at the [wiki](https://github.com/cflurin/homebridge-mqtt/wiki)
+For more examples take a look at the [wiki](https://github.com/cflurin/homebridge-redis/wiki)

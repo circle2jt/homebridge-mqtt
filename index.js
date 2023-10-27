@@ -6,7 +6,7 @@ var Controller = require('./lib/controller.js').Controller;
 var HapAccessory, Service, Characteristic, UUIDGen;
 var cachedAccessories = 0;
 
-var platform_name = "mqtt";
+var platform_name = "redis";
 var plugin_name = "homebridge-" + platform_name;
 var storagePath;
 var plugin_version;

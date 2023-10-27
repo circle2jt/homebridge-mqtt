@@ -1,18 +1,24 @@
 {
-  "pluginAlias": "mqtt",
+  "pluginAlias": "redis",
   "pluginType": "platform",
   "singular": true,
-  "headerDisplay": "Homebridge-mqtt is a dynamic Plugin that allows you to add and control accessories with a mqtt API.",
+  "headerDisplay": "Homebridge-redis is a dynamic Plugin that allows you to add and control accessories with a redis API.",
   "schema": {
     "type": "object",
     "properties": {
       "name": {
         "title": "Name",
         "type": "string",
-        "default": "mqtt",
+        "default": "redis",
         "required": true
       },
-      "redis": {
+      "redisDB": {
+        "title": "Redis URI",
+        "type": "string",
+        "default": "redis://0.0.0.0:6379",
+        "required": true
+      },
+      "redisPubSub": {
         "title": "Redis URI",
         "type": "string",
         "default": "redis://0.0.0.0:6379",
@@ -21,47 +27,15 @@
       "getterDevices": {
         "title": "Getter devices",
         "type": "string",
-        "default": "name1,serviceName1|name2,serviceName2",
+        "default": "",
         "required": false
       },
       "url":  {
         "title": "url",
         "type": "string",
-        "default": "mqtt://120.0.0.1",
+        "default": "redis://120.0.0.1",
         "required": true,
-        "description": "Replace 127.0.0.1 with the ip-address of your mqtt broker."
-      },
-      "port": {
-        "title": "port",
-        "type": "string",
-        "required": false,
-        "default": "1883",
-        "description": "Mqtt port (optional, default 1883)."
-      },
-      "username": {
-        "title": "username",
-        "type": "string",
-        "required": false,
-        "description": "Add a username for the mqtt broker if required."
-      },
-      "password": {
-        "title": "password",
-        "type": "string",
-        "required": false,
-        "description": "Add a password for the mqtt broker if required."
-      },
-      "qos": {
-        "title": "qos",
-        "type": "integer",
-        "required": false,
-        "default": 0,
-        "description": "0: fire and forget, 1: at least once, 2: once and once only. Default: 0."
-      },
-      "cert": {
-        "title": "cert",
-        "type": "string",
-        "required": false,
-        "description": "Path to the certificate (optional)."
+        "description": "Replace 127.0.0.1 with the ip-address of your redis broker."
       },
       "key": {
         "title": "key",
@@ -79,7 +53,7 @@
         "title": "client_id",
         "type": "string",
         "required": false,
-        "description": "Mqtt client id (optional)."
+        "description": "redis client id (optional)."
       },
       "topic_type": {
         "title": "topic_type",
