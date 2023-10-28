@@ -64,10 +64,10 @@ function PluginPlatform(log, config, api) {
 
   if (api) {
 
-    api.on('didFinishLaunching', function() {
+    api.on('didFinishLaunching', async function() {
       this.log("Number of cached Accessories: %s", cachedAccessories);
       
-      this.controller.start();      
+      await this.controller.start();      
     }.bind(this));
   }
 }
