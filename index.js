@@ -3,7 +3,7 @@
 var Utils = require('./lib/utils.js').Utils;
 var Controller = require('./lib/controller.js').Controller;
 
-var HapAccessory, Service, Characteristic, UUIDGen;
+var HapAccessory, Service, Characteristic, UUIDGen, Categories;
 var cachedAccessories = 0;
 
 var platform_name = "redis";
@@ -16,7 +16,7 @@ module.exports = function(homebridge) {
   console.log("homebridge API version: " + homebridge.version);
   
   HapAccessory = homebridge.platformAccessory;
-  
+  Categories = homebridge.Categories
   Service = homebridge.hap.Service;
   Characteristic = homebridge.hap.Characteristic;
   UUIDGen = homebridge.hap.uuid; // Universally Unique IDentifier
@@ -57,7 +57,8 @@ function PluginPlatform(log, config, api) {
     "HapAccessory": HapAccessory,
     "Characteristic": Characteristic,
     "Service": Service,
-    "UUIDGen": UUIDGen
+    "UUIDGen": UUIDGen, 
+    "Categories": Categories,
   }
   
   this.controller = new Controller(c_parameters);
