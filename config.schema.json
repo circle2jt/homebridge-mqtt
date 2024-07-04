@@ -21,7 +21,8 @@
       "getterDevices": {
         "title": "Getter devices",
         "type": "string",
-        "default": "",
+        "default": "*",
+        "description": "Name1.ServiceName1#Characteristic1,Characteristic2|Name2.ServiceName2#Characteristic3,Characteristic4",
         "required": false
       },
       "topic_type": {
