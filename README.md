@@ -375,15 +375,6 @@ topic: homebridge/from/response
 payload: {"name": "flex_lamp", "service_name": "light", "characteristic": "On", "cachedValue": true}
 ```
 
-### set reachability
-
-```sh
-topic: homebridge/to/set/reachability
-payload: {"name": "flex_lamp", "reachable": true}
-or
-payload: {"name": "flex_lamp", "reachable": false}
-```
-
 ### set accessory information
 
 ```sh

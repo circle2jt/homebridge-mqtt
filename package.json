@@ -1,6 +1,6 @@
 {
   "name": "homebridge-redis",
-  "version": "1.1.3",
+  "version": "2.0.0-beta.0",
   "description": "Redis Plugin for Homebridge",
   "license": "ISC",
   "author": {
@@ -22,8 +22,8 @@
     "url": "http://github.com/circle2jt/homebridge-redis/issues"
   },
   "engines": {
-    "node": ">=4.3.2",
-    "homebridge": ">=0.4.16"
+    "homebridge": "^1.6.0 || ^2.0.0-beta.0",
+    "node": "^18.20.4 || ^20.15.1"
   },
   "dependencies": {
     "ioredis": "^5.3.2"
