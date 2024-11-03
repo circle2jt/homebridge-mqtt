@@ -18,6 +18,13 @@
         "default": "redis://0.0.0.0:6379",
         "required": true
       },
+      "deviceUpdatedCharacteristic": {
+        "title": "Device Updated Characteristics",
+        "type": "string",
+        "default": "*",
+        "description": "Always publish event when get update these characteristics",
+        "required": false
+      },
       "getterDevices": {
         "title": "Getter devices",
         "type": "string",

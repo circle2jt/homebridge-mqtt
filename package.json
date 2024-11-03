@@ -1,6 +1,6 @@
 {
   "name": "homebridge-redis",
-  "version": "2.0.0-beta.0",
+  "version": "2.0.1-alpha.1",
   "description": "Redis Plugin for Homebridge",
   "license": "ISC",
   "author": {
